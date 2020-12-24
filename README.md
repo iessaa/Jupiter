@@ -8,3 +8,10 @@ A user story management tool that allows users to create and manage user stories
 - Vijaya Pandey
 ## Motivation
 A class project for CS 581: Advanced Software Engineering @ NMSU, Spring 2015.
+## libraries required to run jupitar
+Please download and place the following list of libraries into lib folder
+- itextpdf-5.3.4.jar
+- opencsv-3.3.jar
+- yfiles-for-javafx.jar
+- javafx-dialogs-0.0.4.jar
+
