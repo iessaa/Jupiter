@@ -7,4 +7,4 @@ A user story management tool that allows users to create and manage user stories
 - Ruth Torres Castillo
 - Vijaya Pandey
 ## Motivation
-A class project for CS 581: Advanced Software Engineering
+A class project for CS 581: Advanced Software Engineering @ NMSU, Spring 2015.
