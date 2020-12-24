@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minWidth="315.0" prefHeight="585.9998779296875" prefWidth="460.9998779296875" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="jupiter.us.GenerateRequirDocController">
+  <children>
+    <TextArea fx:id="outputTextArea" layoutX="184.0" layoutY="82.0" prefHeight="205.0" prefWidth="261.0" wrapText="true" />
+    <Pane layoutX="184.0" layoutY="307.0" prefHeight="92.0" prefWidth="260.9998779296875" styleClass="Silver">
+      <children>
+        <ComboBox fx:id="sortedBy" layoutX="24.0" layoutY="38.0" prefWidth="223.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Label layoutX="24.0" layoutY="15.0" text="Sorted By:" />
+      </children>
+      <stylesheets>
+        <URL value="@main.css" />
+      </stylesheets>
+    </Pane>
+    <GridPane layoutX="14.0" layoutY="82.0" prefHeight="470.0" prefWidth="152.0" styleClass="Silver">
+      <children>
+        <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <CheckBox fx:id="storyID" mnemonicParsing="false" text="Story ID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <CheckBox fx:id="title" mnemonicParsing="false" text="Title" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <CheckBox fx:id="storyDetails" mnemonicParsing="false" text="Story Details" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <CheckBox fx:id="AcceptCriter" mnemonicParsing="false" text="Acceptance Criteria" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <CheckBox id="Elaboration" fx:id="elaboration" mnemonicParsing="false" text="Elaboration" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <CheckBox fx:id="createdBy" mnemonicParsing="false" text="Created By" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <CheckBox id="AssignedTo" fx:id="assignedTo" mnemonicParsing="false" text="Assigned To" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <CheckBox fx:id="requierType" mnemonicParsing="false" text="Requirment Type" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <CheckBox id="EstimatedTime" fx:id="estimatedTime" mnemonicParsing="false" text="Estimated Time" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <CheckBox id="Status" fx:id="status" mnemonicParsing="false" text="Status" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <CheckBox fx:id="parentStory" mnemonicParsing="false" text="Parent User Story" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+        <CheckBox fx:id="priority" mnemonicParsing="false" text="Priority" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="217.0" minWidth="4.0" prefWidth="4.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="558.0" minWidth="10.0" prefWidth="244.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="0.0" prefWidth="0.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="37.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="119.0" minHeight="0.0" prefHeight="37.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="3.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="5.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="9.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="9.0" prefHeight="36.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <stylesheets>
+        <URL value="@main.css" />
+      </stylesheets>
+    </GridPane>
+    <Label layoutX="14.0" layoutY="54.0" text="Select Fields" />
+    <Label layoutX="180.0" layoutY="54.0" text="Selected Fields" />
+    <Pane layoutX="0.0" layoutY="1.0" prefHeight="32.0" prefWidth="461.0" styleClass="Silver" />
+    <Pane layoutX="166.0" layoutY="512.0" prefHeight="40.0" prefWidth="295.0" styleClass="Silver">
+      <children>
+        <Button fx:id="myButton" layoutX="148.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleRequirDoc" prefWidth="-1.0" text="Generate Document" />
+      </children>
+    </Pane>
+    <Label layoutX="166.0" layoutY="82.0" text="&gt;&gt;" />
+  </children>
+  <stylesheets>
+    <URL value="@main.css" />
+  </stylesheets>
+</AnchorPane>

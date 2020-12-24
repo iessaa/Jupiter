@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="780.0" prefWidth="1267.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jupiter.us.USEditDialogController">
+  <children>
+    <HBox layoutX="987.0" layoutY="449.0" />
+    <GridPane layoutX="17.0" layoutY="14.0" prefHeight="855.0" prefWidth="769.0">
+      <children>
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="21.0" prefWidth="44.0" text="As a " GridPane.rowIndex="3" />
+        <TextField id="txtDescription" fx:id="usDescriptionField" prefHeight="130.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="103.0" prefWidth="51.0" text="I want" GridPane.rowIndex="4" />
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="75.0" prefWidth="51.0" text="so that" GridPane.rowIndex="5" />
+        <TextField id="txtReason" fx:id="usReasonField" prefHeight="90.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField id="txtAcceptanceCriteria" fx:id="usCriteriaField" prefHeight="71.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="63.0" prefWidth="124.0" text="Acceptance Criteria" GridPane.rowIndex="6" />
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="47.0" prefWidth="44.0" text="Title" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField id="txtSubject" fx:id="usTitleField" prefHeight="52.0" prefWidth="268.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="58.0" prefWidth="120.0" text="Add user story" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField id="txtAcceptanceCriteria1" fx:id="usElaborationField" prefHeight="65.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="44.0" prefWidth="78.0" text="Elaboration" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="25.0" prefWidth="51.0" text="Priority" GridPane.columnIndex="0" GridPane.rowIndex="14" GridPane.valignment="TOP" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="72.0" prefWidth="118.0" text="Parent User Story" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="27.0" prefWidth="44.0" text="Status" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="15.0" prefWidth="105.0" text="Estimated Time" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+        <Label alignment="CENTER_LEFT" contentDisplay="CENTER" minWidth="-Infinity" prefHeight="27.0" prefWidth="83.0" text="Assigned to" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+        <Label alignment="CENTER_LEFT" contentDisplay="CENTER" minWidth="-Infinity" prefHeight="24.0" prefWidth="77.0" text="Created By" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <TextField id="txtSubject" fx:id="usCreatedByField" prefHeight="20.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <TextField id="txtSubject" fx:id="usAssignedToField" prefHeight="21.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="58.0" prefWidth="64.0" text="Story ID" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="15.0" prefWidth="115.0" text="Requirment Type" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+        <TextField id="txtSubject" fx:id="usRoleField" prefHeight="52.0" prefWidth="268.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField id="txtSubject" fx:id="usRequirementTypeField" prefHeight="21.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+        <TextField fx:id="usEstimatedTimeField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+        <TextField fx:id="usStatusField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+        <TextField fx:id="usPriorityField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14" GridPane.valignment="TOP" />
+        <TextField fx:id="usIDField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox prefHeight="26.0" prefWidth="122.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="137.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="518.0" minWidth="10.0" prefWidth="419.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="0.0" prefWidth="10.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="119.0" minHeight="0.0" prefHeight="52.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="305.0" minHeight="0.0" prefHeight="55.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="77.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="75.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="75.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="70.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="5.0" prefHeight="34.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="9.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="209.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Button layoutX="810.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+    <Button layoutX="882.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleOk" text="Save" />
+    <Button contentDisplay="RIGHT" layoutX="966.0" layoutY="40.0" mnemonicParsing="false" text="Link" textAlignment="RIGHT" />
+  </children>
+  <stylesheets>
+    <URL value="@jupiter/us/view/main.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="780.0" prefWidth="1267.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jupiter.us.USEditDialogController">
+  <children>
+    <HBox layoutX="987.0" layoutY="449.0" />
+    <GridPane layoutX="17.0" layoutY="7.0" prefHeight="855.0" prefWidth="700.0" styleClass="white">
+      <children>
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="21.0" prefWidth="44.0" text="As a " GridPane.rowIndex="3" />
+        <TextField id="txtDescription" fx:id="usDescriptionField" prefHeight="96.0" prefWidth="506.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="103.0" prefWidth="51.0" text="I want" GridPane.rowIndex="4" />
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="75.0" prefWidth="51.0" text="so that" GridPane.rowIndex="5" />
+        <TextField id="txtReason" fx:id="usReasonField" prefHeight="96.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField id="txtAcceptanceCriteria" fx:id="usCriteriaField" prefHeight="70.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="63.0" prefWidth="124.0" text="Acceptance Criteria" GridPane.rowIndex="6" />
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="21.0" prefWidth="44.0" text="Title" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField id="txtSubject" fx:id="usTitleField" prefHeight="25.0" prefWidth="506.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField id="txtAcceptanceCriteria1" fx:id="usElaborationField" prefHeight="70.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="44.0" prefWidth="78.0" text="Elaboration" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="31.0" prefWidth="115.0" text="Parent User Story" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="27.0" prefWidth="44.0" text="Status" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="15.0" prefWidth="105.0" text="Estimated Time" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+        <Label alignment="CENTER_LEFT" contentDisplay="CENTER" minWidth="-Infinity" prefHeight="27.0" prefWidth="83.0" text="Assigned to" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+        <Label alignment="CENTER_LEFT" contentDisplay="CENTER" minWidth="-Infinity" prefHeight="24.0" prefWidth="77.0" text="Created By" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <TextField id="txtSubject" fx:id="usCreatedByField" prefHeight="25.0" prefWidth="506.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <TextField id="txtSubject" fx:id="usAssignedToField" prefHeight="25.0" prefWidth="506.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="58.0" prefWidth="64.0" styleClass="white" text="Story ID" GridPane.rowIndex="1" />
+        <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="15.0" prefWidth="115.0" text="Requirment Type" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+        <TextField id="txtSubject" fx:id="usRoleField" prefHeight="25.0" prefWidth="506.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField id="txtSubject" fx:id="usRequirementTypeField" prefHeight="25.0" prefWidth="506.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+        <Label alignment="CENTER" minWidth="-Infinity" prefHeight="31.0" prefWidth="64.0" text="Priority" textAlignment="LEFT" GridPane.columnIndex="0" GridPane.rowIndex="14" GridPane.valignment="TOP" />
+        <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="20.0" prefWidth="201.0" text="  Add user story" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+        <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="usIDField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="usEstimCbox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="1" />
+                     <String fx:value="2" />
+                     <String fx:value="3" />
+                     <String fx:value="5" />
+                     <String fx:value="8" />
+                     <String fx:value="13" />
+                     <String fx:value="21" />
+                     <String fx:value="34" />
+                     <String fx:value="55" />
+                     <String fx:value="89" />
+                     <String fx:value="144" />
+                     <String fx:value="233" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <ComboBox fx:id="usStatusCbox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="On process" />
+                     <String fx:value="Completed" />
+                     <String fx:value="Suspended" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="1" />
+                     <String fx:value="2" />
+                     <String fx:value="3" />
+                     <String fx:value="4" />
+                     <String fx:value="5" />
+                     <String fx:value="6" />
+                     <String fx:value="7" />
+                     <String fx:value="8" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="High" />
+                     <String fx:value="Low" />
+                     <String fx:value="Medium" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="169.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="518.0" minWidth="10.0" prefWidth="506.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="0.0" prefWidth="25.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="119.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="305.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="104.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="103.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="77.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="56.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="5.0" prefHeight="44.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="360.0" minHeight="9.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="360.0" minHeight="9.0" prefHeight="144.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Separator layoutX="712.0" layoutY="0.0" orientation="VERTICAL" prefHeight="780.0" />
+    <Pane fx:id="CodeLinkage" layoutX="735.0" layoutY="0.0" prefHeight="780.0" prefWidth="518.0" styleClass="white">
+      <children>
+        <Button contentDisplay="RIGHT" layoutX="450.0" layoutY="29.0" mnemonicParsing="false" text="Link" textAlignment="RIGHT" />
+        <Label layoutX="217.0" layoutY="4.0" text="Code Linkage" />
+        <Button layoutX="24.0" layoutY="29.0" mnemonicParsing="false" text="Open Code" />
+        <TextArea layoutX="23.0" layoutY="61.0" prefHeight="25.0" prefWidth="472.0" wrapText="true" />
+        <ListView layoutX="22.0" layoutY="125.0" prefHeight="200.0" prefWidth="472.0" />
+        <TextArea layoutX="22.0" layoutY="645.0" prefHeight="31.0" prefWidth="472.0" wrapText="true" />
+          <Button layoutX="18.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+          <Button layoutX="77.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleOk" text="Save" />
+      </children>
+    </Pane>
+    <Separator layoutX="735.0" layoutY="20.0" prefWidth="518.0" />
+    <Separator layoutX="17.0" layoutY="20.0" prefWidth="700.0" />
+  </children>
+  <stylesheets>
+    <URL value="@main.css" />
+  </stylesheets>
+</AnchorPane>

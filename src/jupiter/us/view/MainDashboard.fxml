@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import org.fxmisc.richtext.*?>
+
+<AnchorPane id="AnchorPane" disable="false" focusTraversable="false" minHeight="672.0" prefHeight="780.0" prefWidth="1267.0" styleClass="mainFxmlClass, root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jupiter.us.USOverviewController">
+  <children>
+    <TableView fx:id="usTable" layoutX="62.0" layoutY="83.0" prefHeight="264.0" prefWidth="713.0">
+      <columns>
+        <TableColumn fx:id="usIDColumn" prefWidth="81.0" text="UserStoryID" />
+        <TableColumn fx:id="usTitleColumn" prefWidth="379.0" text="Title" />
+        <TableColumn fx:id="usStatusColumn" minWidth="0.0" prefWidth="68.0" text="Status" />
+        <TableColumn fx:id="usEstimatedTimeColumn" minWidth="0.0" prefWidth="63.0" text="Duration" />
+      </columns>
+    </TableView>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="45.0" prefWidth="1267.0" styleClass="Silver">
+      <children>
+        <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleNewUS" prefHeight="22.0" prefWidth="118.0" text="Add User Story" />
+        <Button layoutX="161.0" layoutY="11.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="128.0" text="Add User" />
+        <Button layoutX="315.0" layoutY="11.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="128.0" text="Code Graph" />
+        <Button layoutX="464.0" layoutY="11.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="128.0" text="Story Hierachy" />
+        <Button layoutX="614.0" layoutY="12.0" mnemonicParsing="false" text="Requirment Document" />
+            <Button layoutX="757.0" layoutY="12.0" mnemonicParsing="false" onAction="#svaeToFile" prefHeight="22.0" prefWidth="128.0" text="Save to file" />
+      </children>
+      <stylesheets>
+        <URL value="@main.css" />
+      </stylesheets>
+    </Pane>
+    <Pane layoutX="62.0" layoutY="345.0" prefHeight="45.0" prefWidth="713.0" styleClass="Silver">
+      <children>
+        <Button layoutX="143.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleDeleteUS" prefHeight="22.0" prefWidth="105.0" text="Delete Story" />
+        <Button layoutX="7.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleEditUS" prefHeight="22.0" prefWidth="105.0" text="Edit Story" />
+      </children>
+    </Pane>
+    <TableView id="usTable" layoutX="798.0" layoutY="83.0" prefHeight="264.0" prefWidth="357.0">
+      <columns>
+        <TableColumn prefWidth="81.0" text="User ID" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="258.0" text="Name" />
+      </columns>
+    </TableView>
+    <Pane layoutX="798.0" layoutY="345.0" prefHeight="45.0" prefWidth="357.0" styleClass="Silver">
+      <children>
+        <Button layoutX="18.0" layoutY="10.0" mnemonicParsing="false" text="Show more..." />
+      </children>
+    </Pane>
+    <TableView id="usTable" fx:id="staticTable" layoutX="798.0" layoutY="409.0" prefHeight="184.0" prefWidth="357.0">
+      <columns>
+        <TableColumn fx:id="Statistics" maxWidth="5000.0" minWidth="10.0" prefWidth="341.0" text="Statistics" />
+      </columns>
+    </TableView>
+    <Pane layoutX="798.0" layoutY="593.0" prefHeight="45.0" prefWidth="357.0" styleClass="Silver">
+      <children>
+        <Button layoutX="18.0" layoutY="10.0" mnemonicParsing="false" text="Show more..." />
+      </children>
+    </Pane>
+    <ScrollPane layoutX="62.0" layoutY="433.0" prefHeight="205.0" prefWidth="713.0">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="502.0" prefWidth="700.0">
+          <children>
+            <GridPane layoutX="16.0" layoutY="33.0" prefHeight="700.0" prefWidth="700.0">
+              <children>
+                <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="58.0" prefWidth="64.0" text="Story ID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="15.0" prefWidth="44.0" text="Title" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="21.0" prefWidth="44.0" text="As a " GridPane.rowIndex="2" />
+                <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="103.0" prefWidth="51.0" text="I want" GridPane.rowIndex="3" />
+                <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="75.0" prefWidth="51.0" text="so that" GridPane.rowIndex="4" />
+                <Label alignment="TOP_LEFT" minWidth="-Infinity" prefHeight="63.0" prefWidth="124.0" text="Acceptance Criteria" GridPane.rowIndex="5" />
+                <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="44.0" prefWidth="78.0" text="Elaboration" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <Label alignment="CENTER_LEFT" contentDisplay="CENTER" minWidth="-Infinity" prefHeight="24.0" prefWidth="77.0" text="Created By" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                <Label alignment="CENTER_LEFT" contentDisplay="CENTER" minWidth="-Infinity" prefHeight="27.0" prefWidth="83.0" text="Assigned to" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="15.0" prefWidth="115.0" text="Requirment Type" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+                <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="15.0" prefWidth="105.0" text="Estimated Time" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+                <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="27.0" prefWidth="44.0" text="Status" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+                <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="72.0" prefWidth="118.0" text="Parent User Story" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+                <Label alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="25.0" prefWidth="51.0" text="Priority" GridPane.columnIndex="0" GridPane.rowIndex="13" GridPane.valignment="TOP" />
+                <Label fx:id="idLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label fx:id="titleLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="roleLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="descriptionLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="reasonLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label fx:id="criteriaLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label fx:id="elaborationLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Label fx:id="createdByLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <Label fx:id="assignedToLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                <Label fx:id="requirementTypeLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                <Label fx:id="estimatedTimeLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                <Label fx:id="statusLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                <Label fx:id="parentLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                <Label fx:id="priorityLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="13" GridPane.valignment="TOP" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="182.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="596.0" minWidth="10.0" prefWidth="489.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.0" minWidth="0.0" prefWidth="29.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="119.0" minHeight="0.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="305.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="360.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="360.0" minHeight="5.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="360.0" minHeight="9.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="308.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </ScrollPane>
+    <Pane layoutX="62.0" layoutY="409.0" prefHeight="24.0" prefWidth="713.0" styleClass="Silver">
+      <children>
+        <Label layoutX="301.0" layoutY="5.0" text="User Story Details" />
+      </children>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@adduserstory.css" />
+    <URL value="@main.css" />
+  </stylesheets>
+</AnchorPane>
