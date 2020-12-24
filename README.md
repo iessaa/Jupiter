@@ -14,4 +14,7 @@ Please download and place the following list of libraries into lib folder
 - opencsv-3.3.jar
 - yfiles-for-javafx.jar
 - javafx-dialogs-0.0.4.jar
+## Project status
+It's no longer actively maintained.
+
 
