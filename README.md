@@ -1,5 +1,5 @@
 # Jupiter
-A user story management tool that allows users to create and manage user stories, and to generate requirements documents and link them to related and the actual code.
+A user story management tool that allows users to create and manage user stories, and to generate requirements documents and link them to related and the actual code. For more info about the requirement specification and the software architecture of jupitar, please read the pdf files placed in doc folder.
 ## Developers
 - Essa Imhed
 - Hitesh N. Sharma
